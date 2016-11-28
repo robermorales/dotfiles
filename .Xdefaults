@@ -1,0 +1,10 @@
+xterm*faceName:   size=10:antialias=true
+xterm*selectToClipboard: true
+xterm*termName:   xterm-256color
+xterm*background: rgb:10/10/10
+xterm*foreground: rgb:c0/c0/c0
+xterm*saveLines:  1000
+xterm*geometry:   +50+100
+xterm*locale:     true
+xterm*utf8:       1
+
