@@ -14,7 +14,7 @@ alias grep='grep --color=always'
 #`git status -sb 2>/dev/null` $DOCKER_MACHINE_NAME \$ '
 
 export VISUAL=vim
-# export BROWSER=firefox
+export BROWSER=chromium
 export ANDROID_HOME=~/Android/Sdk
 
 if [ -f ~/.git-prompt.sh ]; then
@@ -25,7 +25,7 @@ if [ -f ~/.git-prompt.sh ]; then
 	GIT_PS1_SHOWUNTRACKEDFILES=true
 	GIT_PS1_SHOWUPSTREAM="verbose"
 	# GIT_PS1_UNTRACKEDFILES=true
-	PROMPT_COMMAND='__git_ps1 " \w" " 🐾 "' # \\\$
+	PROMPT_COMMAND='__git_ps1 " \w" " \\\$ "'
 	# PROMPT_COMMAND='__git_ps1 "\[\e[93m\]\e[1m\w\[\e[0m\]" "\\$" '
 fi
 
@@ -45,16 +45,24 @@ fi
 # GIT_PROMPT_THEME=Single_line # use theme optimized for solarized color scheme
 # source ~/.bash-git-prompt/gitprompt.sh
 
+alias pliego='wget http://www.aytobadajoz.es/files/archivos/ayto/2016_09/1457-16_servicio_de_fotografias_del_ayuntamiento_de_badajoz.pdf -O - 2>/dev/null | md5sum -'
+
+export API_ROOT='http://localhost:8000'
+
+export PATH=/home/rober/opt/pycharm/bin:$PATH
+
 alias beep='paplay /usr/share/sounds/ubuntu/stereo/message.ogg'
 
+# added by travis gem
+[ -f /home/rober/.travis/travis.sh ] && source /home/rober/.travis/travis.sh
+
+
+
+export GOROOT=$HOME/go1.X
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin/
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias gg='git log --oneline --decorate --all --graph'
 
-export AN=--all-namespaces
 
-eval "$(starship init bash)"
-export STARSHIP_PROMPT="$(starship prompt)"  
-PS1="\[$STARSHIP_PROMPT\] "  
 
