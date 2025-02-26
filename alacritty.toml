@@ -1,5 +1,4 @@
 [window]
-
 decorations="None"
 startup_mode="Fullscreen"
 dynamic_padding=true
@@ -9,3 +8,11 @@ history=100000
 
 [font]
 normal={family="FiraCode Nerd Font"}
+size=15
+
+[shell]
+#shell={program="/bin/bash", args=["-l", "-c", "zellij"]}
+program="zellij"
+args=["attach", "--create"]
+
+
