@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -10,51 +6,9 @@ alias ll='ls -l'
 alias la='ls -la'
 alias grep='grep --color=always'
 
-# PS1='[\u@\h \W] \$ '
-#`git status -sb 2>/dev/null` $DOCKER_MACHINE_NAME \$ '
-
-export VISUAL=vim
+export VISUAL=nvim
 # export BROWSER=firefox
-export ANDROID_HOME=~/Android/Sdk
-
-if [ -f ~/.git-prompt.sh ]; then
-	. ~/.git-prompt.sh
-	GIT_PS1_SHOWSTASHSTATE=true
-	GIT_PS1_SHOWDIRTYSTATE=true
-	GIT_PS1_SHOWCOLORHINTS=true
-	GIT_PS1_SHOWUNTRACKEDFILES=true
-	GIT_PS1_SHOWUPSTREAM="verbose"
-	# GIT_PS1_UNTRACKEDFILES=true
-	PROMPT_COMMAND='__git_ps1 " \w" " 🐾 "' # \\\$
-	# PROMPT_COMMAND='__git_ps1 "\[\e[93m\]\e[1m\w\[\e[0m\]" "\\$" '
-fi
-
-# PS1=' \[\e[93m\]\e[1m\w\[\e[0m\] \[\e[32m\]${__git_ps1_branch_name}\[\e[0m\] \$ '
-
-# GIT_PROMPT_ONLY_IN_REPO=0
-# GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
-## GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
-# GIT_PROMPT_SHOW_UNTRACKED_FILES=all # can be no, normal or all; determines counting of untracked files
-# GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
-## GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh # uncomment to support Git older than 1.7.10
-## GIT_PROMPT_START=...    # uncomment for custom prompt start sequence
-## GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
-## as last entry source the gitprompt script
-## GIT_PROMPT_THEME=Custom # use custom theme specified in file GIT_PROMPT_THEME_FILE (default ~/.git-prompt-colors.sh)
-## GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
-# GIT_PROMPT_THEME=Single_line # use theme optimized for solarized color scheme
-# source ~/.bash-git-prompt/gitprompt.sh
-
-alias beep='paplay /usr/share/sounds/ubuntu/stereo/message.ogg'
-
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin/
-
 alias gg='git log --oneline --decorate --all --graph'
 
-export AN=--all-namespaces
-
 eval "$(starship init bash)"
-export STARSHIP_PROMPT="$(starship prompt)"  
-PS1="\[$STARSHIP_PROMPT\] "  
 
