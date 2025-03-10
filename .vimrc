@@ -8,7 +8,7 @@
 
 call plug#begin()
 Plug 'editorconfig/editorconfig-vim'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 " " Plug 'scrooloose/syntastic'
 " ." Plug 'airblade/vim-gitgutter'
 " ." Plug 'valloric/youcompleteme' ", { 'do': './install.py --go-completer --js-completer' }
@@ -71,16 +71,18 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set hidden
 
+set relativenumber
 set number " line numbers
 set mouse=a
 
 syntax enable
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 
 "" change current line hl if insert mode
-autocmd InsertEnter,InsertLeave * set cursorline!
+" autocmd InsertEnter,InsertLeave * set cursorline!
+set cursorline
 
 
 let &t_SI = "\e[5 q"

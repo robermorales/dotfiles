@@ -1,3 +1,7 @@
+import = [
+#     "~/.config/alacritty/themes/themes/dracula_plus.toml"
+]
+
 [window]
 decorations="None"
 startup_mode="Fullscreen"
@@ -11,8 +15,6 @@ normal={family="FiraCode Nerd Font"}
 size=15
 
 [shell]
-#shell={program="/bin/bash", args=["-l", "-c", "zellij"]}
-program="zellij"
-args=["attach", "--create"]
-
-
+# program="zellij"
+# args=["attach", "--create"]
+program="tmux"
