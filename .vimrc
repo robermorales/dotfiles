@@ -1,31 +1,3 @@
-" if empty(glob('~/.vim/autoload/plug.vim'))
-"   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-"     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-" endif
-
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-call plug#begin()
-Plug 'editorconfig/editorconfig-vim'
-" Plug 'altercation/vim-colors-solarized'
-" " Plug 'scrooloose/syntastic'
-" ." Plug 'airblade/vim-gitgutter'
-" ." Plug 'valloric/youcompleteme' ", { 'do': './install.py --go-completer --js-completer' }
-" " Plug 'jacquesbh/vim-showmarks'
-" Plug 'tpope/vim-sensible'
-" Plug 'itchyny/lightline.vim'
-" Plug 'tpope/vim-fugitive'
-" Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" Plug 'tpope/vim-repeat'
-" Plug 'tpope/vim-speeddating'
-" Plug 'vim-scripts/cream-showinvisibles'
-call plug#end()
-
-" set list
-
 " use ; instead of : for every command
 nnoremap ; :
 
@@ -50,14 +22,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Mappings to move lines
-" nnoremap <A-j> :m .+1<CR>==
-" nnoremap <A-k> :m .-2<CR>==
-" inoremap <A-j> <Esc>:m .+1<CR>==gi
-" inoremap <A-k> <Esc>:m .-2<CR>==gi
-" vnoremap <A-j> :m '>+1<CR>gv=gv
-" vnoremap <A-k> :m '<-2<CR>gv=gv
-
 set autoread             " automatically read file if changed outside but not inside
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
@@ -77,13 +41,10 @@ set mouse=a
 
 syntax enable
 set background=dark
-" colorscheme solarized
-
-
-"" change current line hl if insert mode
-" autocmd InsertEnter,InsertLeave * set cursorline!
 set cursorline
-
+" set cursorcolumn
+highlight CursorLine cterm=NONE ctermbg=236
+" highlight CursorColumn cterm=NONE ctermbg=236
 
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
