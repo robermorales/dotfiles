@@ -43,7 +43,7 @@ syntax enable
 set background=dark
 set cursorline
 " set cursorcolumn
-highlight CursorLine cterm=NONE ctermbg=236
+" highlight CursorLine cterm=NONE ctermbg=236
 " highlight CursorColumn cterm=NONE ctermbg=236
 
 let &t_SI = "\e[5 q"
@@ -55,7 +55,7 @@ let &t_EI = "\e[1 q"
 " autocmd VimEnter * silent !echo -ne "\e[1 q"
 " augroup END
 
-autocmd StdinReadPre * let s:std_in=1
+" autocmd StdinReadPre * let s:std_in=1
 
 "" tree
 

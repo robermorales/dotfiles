@@ -1,0 +1,17 @@
+9 = micmute
+0 = mute
+- = volumedown
+= = volumeup
+
+p = playpause
+[ = previoussong
+] = nextsong
+\ = stop
+
+# this requires xwayland to have the music app to be set to spotify, after:
+# ./.local/share/applications/mimeapps.list
+# [Default Applications]
+# audio/x-vorbis+ogg=spotify_spotify.desktop
+# [Added Associations]
+# audio/x-vorbis+ogg=spotify_spotify.desktop;
+; = media

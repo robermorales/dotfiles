@@ -1,0 +1,5 @@
+capslock = overload(control, esc)
+# esc = capslock
+# capslock = overload(control, esc)
+# alt = overload(alt, esc)
+# space = overload(control, space)

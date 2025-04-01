@@ -1,0 +1,13 @@
+
+up = overload(shift, up)
+down = overload(layerdown, down)
+left = overload(layerleft, left)
+
+[layerdown]
+left = home
+right = end
+
+[layerleft]
+up = pageup
+down = pagedown
+

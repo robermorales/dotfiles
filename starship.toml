@@ -34,12 +34,12 @@ style = "bright-black"
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style) "
 style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
+conflicted = "c​"
+untracked = "u​"
+modified = "m​"
+staged = "s​"
+renamed = "r​"
+deleted = "d​"
 stashed = "≡"
 
 [git_state]
@@ -57,5 +57,5 @@ style = "bright-black"
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:#555555"
+style = "bright-black" # fg:#555555"
 format = "[$time ]($style)"
